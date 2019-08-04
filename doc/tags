@@ -1,0 +1,5 @@
+g:vim_utils_view_pct	vim-utils.txt	/*g:vim_utils_view_pct*
+vim-utils	vim-utils.txt	/*vim-utils*
+vim-utils-config	vim-utils.txt	/*vim-utils-config*
+vim-utils-contents	vim-utils.txt	/*vim-utils-contents*
+vim-utils.txt	vim-utils.txt	/*vim-utils.txt*

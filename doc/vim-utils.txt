@@ -1,0 +1,12 @@
+*vim-utils.txt*
+                                                                   *vim-utils*
+
+==============================================================================
+CONTENTS                                                  *vim-utils-contents*
+  1. Configuration..........................................|vim-utils-config|
+
+==============================================================================
+CONFIGURATION                                               *vim-utils-config*
+
+                                                        *g:vim_utils_view_pct*
+Percent location cursor should maintain during `n`, `N`, `*`, and `#` search
