@@ -6,6 +6,10 @@
 ""
 
 
+" Toggle how the number is displayed
+nnoremap <F1> :call vim_utils#ToggleNumLine()<CR>
+
+
 ""
 " @setting g:vim_utils_view_pct
 " Percent location cursor should maintain during `n`, `N`, `*`, and `#` search

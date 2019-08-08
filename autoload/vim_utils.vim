@@ -7,6 +7,28 @@
 
 
 ""
+" Maintain consistent built-in search functionality
+function! vim_utils#SearchImp(type)
+  let l:type = a:type
+
+  if ('A' > a:type)
+    let l:sw = expand("<cword>")
+    let @/ = '\<' . sw . '\>'
+    if ('*' == a:type)
+      let l:start = '/'
+      let l:type = 'n'
+    elseif ('#' == a:type)
+      let l:start = '?'
+      let l:type = 'N'
+    endif
+    exec l:start . '\<' . sw . '\>'
+  endif
+  exec 'norm!' . l:type
+  call vim_utils#SetViewForCursPos(g:vim_utils_view_pct)
+endfunc
+
+
+""
 " Scroll screen so that the current line is located at % of total window
 function! vim_utils#SetViewForCursPos(pct)
   let l:wl = float2nr((winheight(0) * a:pct) / 100)
@@ -27,22 +49,14 @@ endfunc
 
 
 ""
-" Maintain consistent built-in search functionality
-function! vim_utils#SearchImp(type)
-  let l:type = a:type
-
-  if ('A' > a:type)
-    let l:sw = expand("<cword>")
-    let @/ = '\<' . sw . '\>'
-    if ('*' == a:type)
-      let l:start = '/'
-      let l:type = 'n'
-    elseif ('#' == a:type)
-      let l:start = '?'
-      let l:type = 'N'
-    endif
-    exec l:start . '\<' . sw . '\>'
+" Toggle number line from off -> absolute -> hybrid relative num -> off
+function! vim_utils#ToggleNumLine()
+  if !&l:number && !&l:relativenumber
+    set number!
+  elseif &l:number && &l:relativenumber
+    set number!
+    set relativenumber!
+  elseif &l:number && !&l:relativenumber
+    set relativenumber!
   endif
-  exec 'norm!' . l:type
-  call vim_utils#SetViewForCursPos(g:vim_utils_view_pct)
 endfunc

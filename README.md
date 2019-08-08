@@ -1,10 +1,10 @@
 # vim-utils
 
-The `vim-utils` plug-in is a collection of Vim scripts I use daily. While
-useful (at least to me), they don't do enough, per se, to justify their own
-repo. The collection will be added to (slowly) as these scripts are being
-transitioned from a previous repo while undergoing some refactoring and general
-clean-up
+The [vim-utils](https://github.com/ThatsWhatSheCoded/vim-utils) plug-in is a
+collection of Vim scripts I use daily. While useful (at least to me), they
+don't do enough, per se, to justify their own repo. The collection will be
+added to (slowly) as these scripts are being transitioned from a previous repo
+while undergoing some refactoring and general clean-up
 
 
 ## Installation
@@ -24,14 +24,12 @@ and is located in the [docs](../master/doc) directory.
 
 ## Usage
 
-### Remaps:
-
-#### Search Remaps
+### Remaps: Search
 
 These have been modified to keep the window view during searches at the
 specified percentage scroll (e.g. if `g:vim_utils_view_pct = 50` would keep the
 current cursor position at 50% of the total window size much like `zz`).
-Default `g:vim_utils_view_pct = 25`.
+Default is a comfortable 25% (`g:vim_utils_view_pct = 25`).
 
 | Key / Motion  | Description  |
 |:-------------:|:-------------|
@@ -39,6 +37,12 @@ Default `g:vim_utils_view_pct = 25`.
 | `N`           | Repeat latest `/` or `?` search|
 | `*`           | Search forward for next occurrence of word|
 | `#`           | Search backward for next occurrence of word|
+
+### Remaps: Display
+
+| Key / Motion  | Description  |
+|:-------------:|:-------------|
+| `<F1>`        | Toggle line numbers display (off, absolute, hybrid)
 
 
 ## Contact
