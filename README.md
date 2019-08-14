@@ -2,7 +2,7 @@
 
 The [vim-utils](https://github.com/ThatsWhatSheCoded/vim-utils) plug-in is a
 collection of Vim scripts I use daily. While useful (at least to me), they
-don't do enough, per se, to justify their own repo. The collection will be
+are not extensive enough to justify their own repo. The collection will be
 added to (slowly) as these scripts are being transitioned from a previous repo
 while undergoing some refactoring and general clean-up
 
@@ -27,9 +27,16 @@ and is located in the [doc](../master/doc) directory.
 ### Remaps: Search
 
 These have been modified to keep the window view during searches at the
-specified percentage scroll (e.g. if `g:vim_utils_view_pct = 50` would keep the
-current cursor position at 50% of the total window size much like `zz`).
+specified percentage scroll (e.g. `g:vim_utils_view_pct = 50` would keep the
+current cursor position at 50% of the total window size much like `zz`). 
 Default is a comfortable 25% (`g:vim_utils_view_pct = 25`).
+
+To modify, add this line to your `~/.vimrc`:
+
+```
+let g:vim_utils_view_pct = <number>
+```
+
 
 | Key / Motion  | Description  |
 |:-------------:|:-------------|
