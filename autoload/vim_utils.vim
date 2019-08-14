@@ -60,3 +60,17 @@ function! vim_utils#ToggleNumLine()
     set relativenumber!
   endif
 endfunc
+
+
+""
+" Toggle search highlight (on/off) of latest search
+function! vim_utils#ToggleHighlight()
+  set hlsearch!
+endfunc
+
+
+""
+" Visually select latest pasted text
+function! vim_utils#VisSelectPasted()
+  norm! `[v`]
+endfunc

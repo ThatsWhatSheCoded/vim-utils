@@ -40,9 +40,13 @@ Default is a comfortable 25% (`g:vim_utils_view_pct = 25`).
 
 ### Remaps: Display
 
+These remaps are only active during Normal mode.
+
 | Key / Motion  | Description  |
 |:-------------:|:-------------|
 | `<F1>`        | Toggle line numbers display (off, absolute, hybrid)
+| `''`          | Toggle highlight of latest search
+| `gp`          | Visual select latest pasted text
 
 
 ## Contact

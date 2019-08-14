@@ -10,6 +10,14 @@
 nnoremap <F1> :call vim_utils#ToggleNumLine()<CR>
 
 
+" Toggle visible highlight of latest search
+nnoremap <silent>'' :call vim_utils#ToggleHighlight()<CR>
+
+
+" Visual select latest pasted text
+nnoremap gp :call vim_utils#VisSelectPasted()<CR>
+
+
 ""
 " @setting g:vim_utils_view_pct
 " Percent location cursor should maintain during `n`, `N`, `*`, and `#` search
